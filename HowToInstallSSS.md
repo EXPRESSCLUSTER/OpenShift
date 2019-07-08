@@ -88,9 +88,9 @@
    ```bash
    # oc apply -f pv-mariadb.yml
    # oc get pv
-   NAME                     CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS     CLAIM   STORAGECLASS   REASON    AGE
+   NAME          CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS     CLAIM   STORAGECLASS   REASON    AGE
     :
-   pv-clusterpro-mariadb1   10Gi       RWO            Retain           Bound                                       12m
+   pv-mariadb1   10Gi       RWO            Retain           Bound                                       12m
    ```
 1. Create a YAML (e.g. pvc-mariadb1.yml) for a persisten volume claim.
    ```yaml
@@ -113,9 +113,9 @@
    NAME                                 CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS     CLAIM                         STORAGECLASS   REASON    AGE
     :
    persistentvolume/pv-mariadb1         10Gi       RWO            Retain           Bound      <your project>/pvc-mariadb1                            18m
-    :
-   NAME                                 STATUS    VOLUME                   CAPACITY   ACCESS MODES   STORAGECLASS   AGE
-   persistentvolumeclaim/pvc-mariadb1   Bound     pv-clusterpro-mariadb1   10Gi       RWO                           17m   
+   
+   NAME                                 STATUS    VOLUME        CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+   persistentvolumeclaim/pvc-mariadb1   Bound     pv-mariadb1   10Gi       RWO                           17m
    ```
 1. Create a YAML file for MariaDB.
    ```yaml
