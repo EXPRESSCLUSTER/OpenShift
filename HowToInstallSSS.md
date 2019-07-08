@@ -15,7 +15,7 @@
 - Allow root user account for the containers.
   ```bash
   # oc project <your project>
-  # oc adm policy add-scc-to-user anyuid -z default
+  # oc adm policy add-scc-to-user anyuid -z default -n <your project name>
   ```
 
 ## Install SingleServerSafe on a Base Container
