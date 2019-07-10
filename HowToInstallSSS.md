@@ -2,7 +2,8 @@
 ## Index
 - [Prerequisite](#Prerequisite)
 - [Install SingleServerSafe on a Base Container](#Install-SingleServerSafe-on-a-Base-Container)
-- [MariaDB](#MariaDB)
+- [Sidecar Pattern](#Sidecar-Pattern)
+  - [MariaDB](#MariaDB)
 
 ## Prerequisite
 - We have evaluated on the following environment.
@@ -60,8 +61,8 @@
    # docker stop base-centos7-work
    ```
 
-## MariaDB
-### Setup MariaDB
+## Sidecar Pattern
+### MariaDB
 1. Pull MariaDB image. 
    ```bash
    # docker pull mariadb
@@ -203,8 +204,6 @@
    ```bash
    # oc delete -f mariadb1.yml
    ```
-
-### Modify the SingleServerSafe Configuration
 1. Save the library file (e.g. libmysqlclient.so.18.0.0) on a work directory (e.g. /root/work).
 1. Create a container to modify configuration.
    ```bash
@@ -278,8 +277,6 @@
    (On worker node)
    # docker load < base-centos7-sss4mariadb.tar
    ```
-
-### Deploy Pod and Service
 1. Create a YAML file (e.g. sss4mariadb1.yml) as below for a pod of MariaDB and SigleServerSafe.
    ```yaml
    # sss4mariadb1.yml
