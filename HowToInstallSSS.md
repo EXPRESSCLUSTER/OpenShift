@@ -52,7 +52,7 @@
 1. Install EXPRESSCLUSTER X SingleServerSafe.
    ```bash
    # cd /mydata
-   # rpm -i clusterprosss-4.1.1-1.x86_64.rpm
+   # rpm -i expressclssss-4.1.1-1.x86_64.rpm
    ```
 1. Register the licenses of EXPRESSCLUSTER X SingleServerSafe and Agent.
 1. Exit from the container and stop it.
