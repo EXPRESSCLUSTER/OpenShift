@@ -174,6 +174,7 @@
    +--------------------+
    3 rows in set (0.001 sec)
    
+   (Wait for initialization to be completed. If initialization completes, you can see the following table.)
    MariaDB [(none)]> select user,host from mysql.user;
    +----------+-----------+
    | User     | Host      |
