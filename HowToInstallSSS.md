@@ -247,8 +247,8 @@
        |Database Name  |testdb|      |
        |IP Address     |127.0.0.1|Default|
        |Port           |3306|Default|
-       |User Name      |<your user account>||
-       |Password       |<your user password>||
+       |User Name      |your user account||
+       |Password       |your user password||
        |Table          |mysqlwatch|Default|
        |Library Path   |/root/libmysqlclient.so.18.0.0||
 
